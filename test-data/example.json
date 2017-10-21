@@ -1,0 +1,10 @@
+{
+  "FOXA2_IP_MIN6": {
+    "sonicate_min": 14,
+    "incubate_hr": 6
+  },
+  "NOTCH2_HepG2": {
+    "sonicate_min": 8,
+    "incubate_hr": 12
+  }
+}
