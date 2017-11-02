@@ -10,9 +10,13 @@
     <Folder Include="Math\" />
     <Folder Include="Features\" />
     <Folder Include="Data\" />
-    <Folder Include="UI\Welcome\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.4.0.18342" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="UI\WelcomeView.xaml.cs">
+      <DependentUpon>Welcome\UI\Welcome\WelcomeView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

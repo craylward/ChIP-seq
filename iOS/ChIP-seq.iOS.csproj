@@ -111,5 +111,11 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChIP-seq\ChIP-seq.csproj">
+      <Project>{63CEA21B-243A-4E04-9A84-99A50DDDF8A7}</Project>
+      <Name>ChIP-seq</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

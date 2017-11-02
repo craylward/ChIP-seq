@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ChIPseq.UI.WelcomeView"
+    BindingContext="ChIPseq.UI.WelcomeViewModel">
+	<ContentPage.Content>
+        <StackLayout>
+            <Button Text="Start Experimemt"
+                Clicked="OnStartExperimentClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                BorderWidth="3"
+                TextColor="Black"
+                BackgroundColor="LightGreen" />
+            <Button Text="Review Experiments"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                BorderWidth="3"
+                TextColor="Black"
+                BackgroundColor="Purple" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
