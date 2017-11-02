@@ -1,0 +1,11 @@
+﻿{
+  "dependencies": {
+    "Xamarin.Forms": "2.4.0.38779"
+  },
+  "frameworks": {
+    "MonoAndroid,Version=v80": {}
+  },
+  "runtimes": {
+    "win": {}
+  }
+}

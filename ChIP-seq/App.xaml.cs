@@ -2,17 +2,15 @@
 
 using Xamarin.Forms;
 
-namespace ChIP-seq
+namespace ChIPseq
 {
-	public partial class App : Application
-{
-    public static bool UseMockDataStore = true;
-    public static string BackendUrl = "https://localhost:5000";
-
-    public App()
+    public partial class App : Application
     {
-        InitializeComponent();
 
+        public App()
+        {
+            InitializeComponent();
+
+        }
     }
-}
 }

@@ -6,16 +6,38 @@
 
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="UI\Welcome\WelcomeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Update="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
+	<ItemGroup>
+    <!-- https://bugzilla.xamarin.com/show_bug.cgi?id=55591 -->
+    <None Remove="**/*.xaml" />
+
+    <Compile Update="**/*.xaml.cs" DependentUpon="%(Filename)" />
+    <EmbeddedResource Include="**/*.xaml" SubType="Designer" Generator="MSBuild:UpdateDesignTimeXaml" />
+
+	<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+		  <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Welcome/Welcome.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+		  <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="UI\Welcome\WelcomeView.xaml.cs">
+		    <DependentUpon>*.xaml</DependentUpon>
+		  </Compile>
+</ItemGroup>
+  <ItemGroup>
+		
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UI\" />
     <Folder Include="Math\" />
     <Folder Include="Features\" />
     <Folder Include="Data\" />
+    <Folder Include="UI\Welcome\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.18342" />
   </ItemGroup>
 </Project>
