@@ -3,7 +3,8 @@ namespace ChIPseq.Data
 {
     public class Experiment
     {
-        int Sonication { get; set; }
-        int Incubation { get; set; }
+        public string Name { get; set; }
+        public int Sonication { get; set; }
+        public int Incubation { get; set; }
     }
 }

@@ -1,13 +1,13 @@
 ﻿{
   "dependencies": {
     "Newtonsoft.Json": "10.0.3",
+    "Xamarin.Firebase.iOS.Database": "4.1.0",
     "Xamarin.Forms": "2.4.0.38779"
   },
   "frameworks": {
     "Xamarin.iOS,Version=v1.0": {}
   },
   "runtimes": {
-    "win": {},
-    "win-x86": {}
+    "win": {}
   }
 }

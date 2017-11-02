@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Xamarin.Forms;
 using Foundation;
 using UIKit;
 
@@ -13,9 +13,10 @@ namespace ChIPseq.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            DependencyService.Register<FirebaseiOS>();
+
             LoadApplication(new App());
-
-
 
             return base.FinishedLaunching(app, options);
         }

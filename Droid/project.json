@@ -1,9 +1,10 @@
 ﻿{
   "dependencies": {
+    "Xamarin.Firebase.Database": "42.1021.1",
     "Xamarin.Forms": "2.4.0.38779"
   },
   "frameworks": {
-    "MonoAndroid,Version=v80": {}
+    "MonoAndroid,Version=v8.0": {}
   },
   "runtimes": {
     "win": {}

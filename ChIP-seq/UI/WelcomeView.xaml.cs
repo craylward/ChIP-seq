@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using ChIPseq.Data;
 using Xamarin.Forms;
 
 namespace ChIPseq.UI
@@ -15,7 +15,7 @@ namespace ChIPseq.UI
 
         async void OnStartExperimentClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new StartView());
+            await Navigation.PushAsync(new NameView(new Experiment()));
         }
 
         async void OnReviewExperimentsClicked(object sender, EventArgs e)

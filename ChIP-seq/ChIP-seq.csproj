@@ -12,11 +12,26 @@
     <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.4.0.18342" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.38779" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="SonicationView1.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="UI\WelcomeView.xaml.cs">
       <DependentUpon>Welcome\UI\Welcome\WelcomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="UI\StartView.xaml.cs">
+      <DependentUpon>SonicationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="UI\SonicationView.xaml.cs">
+      <DependentUpon>SonicationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="UI\SonicationView1.xaml.cs">
+      <DependentUpon>SonicationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="SonicationView1.xaml.cs">
+      <DependentUpon>Incubation.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>
