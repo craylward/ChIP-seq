@@ -7,6 +7,7 @@ namespace ChIPseq.Droid
     {
         public FirebaseAndroid()
         {
+            Firebase.Database.FirebaseDatabase.Instance.SetPersistenceEnabled(true);
         }
 
         public void Get(int path, int val)

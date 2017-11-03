@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using ChIPseq.Data;
 using Xamarin.Forms;
 
@@ -9,6 +10,8 @@ namespace ChIPseq.UI
     {
         SonicationViewModel viewModel;
         Experiment exp;
+
+        public SonicationView() { InitializeComponent(); } // Used for previewing
 
         public SonicationView(Experiment exp)
         {
@@ -24,6 +27,7 @@ namespace ChIPseq.UI
             if (viewModel.ValidateSonicationTime(SonicationTime.Text))
             {
                 exp.Sonication = Convert.ToInt32(SonicationTime.Text);
+                Debug.WriteLine($"Experiment Sonication Time: {exp.Sonication}");
                 await Navigation.PushAsync(new IncubationView(exp));
             }
             else {

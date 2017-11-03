@@ -4,20 +4,18 @@
     x:Class="ChIPseq.UI.WelcomeView"
     BindingContext="ChIPseq.UI.WelcomeViewModel">
 	<ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="50">
             <Button Text="Start Experimemt"
+                FontAttributes="Bold"
                 Clicked="OnStartExperimentClicked"
-                HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand"
-                BorderWidth="3"
                 TextColor="Black"
-                BackgroundColor="LightGreen" />
+                BackgroundColor="Green" />
             <Button Text="Review Experiments"
-                HorizontalOptions="Center"
+                FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand"
-                BorderWidth="3"
                 TextColor="Black"
-                BackgroundColor="Purple" />
+                BackgroundColor="Blue" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

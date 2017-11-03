@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using ChIPseq.Data;
 using Xamarin.Forms;
 
@@ -9,6 +10,8 @@ namespace ChIPseq.UI
     {
         NameViewModel viewModel;
         Experiment exp;
+
+        public NameView() { InitializeComponent(); }
 
         public NameView(Experiment exp)
         {
@@ -22,6 +25,7 @@ namespace ChIPseq.UI
             if (viewModel.ValidateName(ExperimentName.Text))
             {
                 exp.Name = ExperimentName.Text;
+                Debug.WriteLine($"Experiment Name: {exp.Name}");
                 await Navigation.PushAsync(new SonicationView(exp));
             }
             else

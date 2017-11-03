@@ -11,7 +11,7 @@ namespace ChIPseq.iOS
 
         public FirebaseiOS()
         {
-            
+           Database.DefaultInstance.PersistenceEnabled = true;   
         }
 
         public void Get(int path, int val)

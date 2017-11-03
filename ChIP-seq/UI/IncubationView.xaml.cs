@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using ChIPseq.Data;
 using Xamarin.Forms;
 
@@ -9,6 +10,8 @@ namespace ChIPseq.UI
     {
         IncubationViewModel viewModel;
         Experiment exp;
+
+        public IncubationView() { InitializeComponent(); }
 
         public IncubationView(Experiment exp)
         {
@@ -24,6 +27,7 @@ namespace ChIPseq.UI
             if (viewModel.ValidateIncubationTime(IncubationTime.Text))
             {
                 exp.Incubation = Convert.ToInt32(IncubationTime.Text);
+                Debug.WriteLine($"Experiment Incubation Time: {exp.Incubation}");
                 await Navigation.PushAsync(new ReviewView());
             }
             else {
