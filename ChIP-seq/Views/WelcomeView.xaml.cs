@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Collections.Generic;
-using ChIPseq.Data;
+using ChIPseq.Models;
 using Xamarin.Forms;
 
-namespace ChIPseq.UI
+namespace ChIPseq.Views
 {
     public partial class WelcomeView : ContentPage
     {
         public WelcomeView()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
 

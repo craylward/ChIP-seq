@@ -1,5 +1,8 @@
 ﻿using System;
-using ChIPseq.Data;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using ChIPseq.Models;
+using ChIPseq.Services;
 
 namespace ChIPseq.Droid
 {
@@ -10,17 +13,37 @@ namespace ChIPseq.Droid
             Firebase.Database.FirebaseDatabase.Instance.SetPersistenceEnabled(true);
         }
 
-        public void Get(int path, int val)
+        public void Get(string path, Action<int> handler)
         {
             throw new NotImplementedException();
         }
 
-        public void Get(bool path, int val)
+        public void Get(string path, Action<bool> handler)
         {
             throw new NotImplementedException();
         }
 
-        public void Get(string path, int val)
+        public void Get(string path, Action<string> handler)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Get(List<string> path, Action<int> handler)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Get(List<string> path, Action<bool> handler)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Get(List<string> path, Action<string> handler)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GetExperiments(Action<List<Experiment>> handler)
         {
             throw new NotImplementedException();
         }
@@ -36,6 +59,21 @@ namespace ChIPseq.Droid
         }
 
         public void Set(string path, string val)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Set(List<string> path, int val)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Set(List<string> path, bool val)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Set(List<string> path, string val)
         {
             throw new NotImplementedException();
         }

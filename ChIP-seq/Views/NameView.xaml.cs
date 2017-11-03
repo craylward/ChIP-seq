@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using ChIPseq.Data;
+using ChIPseq.Models;
+using ChIPseq.ViewModels;
 using Xamarin.Forms;
 
-namespace ChIPseq.UI
+namespace ChIPseq.Views
 {
     public partial class NameView : ContentPage
     {

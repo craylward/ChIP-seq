@@ -1,5 +1,5 @@
 ﻿using System;
-using ChIPseq.UI;
+using ChIPseq.Views;
 using Xamarin.Forms;
 
 namespace ChIPseq
@@ -9,6 +9,8 @@ namespace ChIPseq
         public App()
         {
             InitializeComponent();
+
+
             MainPage = new NavigationPage(new WelcomeView());
         }
 

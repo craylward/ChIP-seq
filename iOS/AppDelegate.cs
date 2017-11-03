@@ -16,6 +16,8 @@ namespace ChIPseq.iOS
 
             DependencyService.Register<FirebaseiOS>();
 
+            Firebase.Core.App.Configure();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

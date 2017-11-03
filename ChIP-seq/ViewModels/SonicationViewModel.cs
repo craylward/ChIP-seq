@@ -3,9 +3,9 @@ using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace ChIPseq.UI
+namespace ChIPseq.ViewModels
 {
-    public class IncubationViewModel
+    public class SonicationViewModel
     {
         string inputString = "";
         string displayText = "";
@@ -13,7 +13,7 @@ namespace ChIPseq.UI
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public IncubationViewModel()
+        public SonicationViewModel()
         {
             //AddCharCommand = new Command<string>((key) =>
             //{
@@ -38,7 +38,7 @@ namespace ChIPseq.UI
 
         public ICommand DeleteCharCommand { protected set; get; }
 
-        public bool ValidateIncubationTime(string entry)
+        public bool ValidateSonicationTime(string entry)
         {
             // TODO
             return true;

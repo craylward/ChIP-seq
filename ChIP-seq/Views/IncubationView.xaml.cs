@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using ChIPseq.Data;
+using ChIPseq.ViewModels;
+using ChIPseq.Models;
 using Xamarin.Forms;
+using ChIPseq.Services;
 
-namespace ChIPseq.UI
+namespace ChIPseq.Views
 {
     public partial class IncubationView : ContentPage
     {
@@ -22,13 +24,14 @@ namespace ChIPseq.UI
         }
 
 
-        async void OnEnterClicked(object sender, EventArgs e)
+        async void OnContinueClicked(object sender, EventArgs e)
         {
             if (viewModel.ValidateIncubationTime(IncubationTime.Text))
             {
                 exp.Incubation = Convert.ToInt32(IncubationTime.Text);
                 Debug.WriteLine($"Experiment Incubation Time: {exp.Incubation}");
-                await Navigation.PushAsync(new ReviewView());
+                FirebaseService.Instance.AddExperiment(exp);
+                await Navigation.PopToRootAsync();
             }
             else {
                 // TODO Add alert display to correct the entry

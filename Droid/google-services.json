@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "206409248154",
+    "firebase_url": "https://chip-seq.firebaseio.com",
+    "project_id": "chip-seq",
+    "storage_bucket": "chip-seq.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206409248154:android:930d3a5e16230d93",
+        "android_client_info": {
+          "package_name": "com.aylward.chipseq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206409248154-0dt5210bn8hkn8hmtl5qsk3mdkffv6q4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8ewrk3pJcNKqIiXsL1ThoiTNk5O5gX0I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ChIPseq.UI.NameView">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ChIPseq.Views.NameView">
 	<ContentPage.Content>
         <StackLayout Padding="20">
         <Label Text="Name this experiment"
@@ -8,12 +10,14 @@
             <Entry x:Name="ExperimentName"
                 WidthRequest="100"
             VerticalOptions="CenterAndExpand"/>
-            <Button Text="Continue"
-                VerticalOptions="CenterAndExpand"
-                BorderWidth="3"
-                TextColor="Black"
+            <Button Text= "Continue" 
+                TextColor="White"
+                FontAttributes="Bold"
                 Clicked="OnContinueClicked"
-                />
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="DarkBlue"
+            />
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

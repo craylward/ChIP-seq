@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="ChIPseq.UI.WelcomeView"
-    BindingContext="ChIPseq.UI.WelcomeViewModel">
+    x:Class="ChIPseq.Views.WelcomeView"
+    BindingContext="ChIPseq.Views.WelcomeViewModel">
 	<ContentPage.Content>
         <StackLayout Padding="50">
             <Button Text="Start Experimemt"
                 FontAttributes="Bold"
                 Clicked="OnStartExperimentClicked"
                 VerticalOptions="CenterAndExpand"
-                TextColor="Black"
+                TextColor="White"
                 BackgroundColor="Green" />
             <Button Text="Review Experiments"
+                Clicked="OnReviewExperimentsClicked"
                 FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand"
-                TextColor="Black"
+                TextColor="White"
                 BackgroundColor="Blue" />
         </StackLayout>
     </ContentPage.Content>
