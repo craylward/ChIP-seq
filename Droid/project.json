@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "Xamarin.Android.Support.Annotations": "26.1.0.1",
     "Xamarin.Firebase.Database": "42.1021.1",
     "Xamarin.Forms": "2.4.0.38779"
   },

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 using ChIPseq.Models;
 using ChIPseq.Services;
 
@@ -21,7 +22,8 @@ namespace ChIPseq.ViewModels
             Experiments = new ObservableCollection<Experiment>();
             FirebaseService.Instance.GetExperiments((List<Experiment> experiments) =>
             {
-                foreach (var exp in experiments)
+                var sortedExperiments = experiments.OrderByDescending(i => i.Date);
+                foreach (var exp in sortedExperiments)
                 {
                     Experiments.Add(exp);
                 }

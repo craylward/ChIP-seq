@@ -6,9 +6,9 @@ using ChIPseq.Services;
 
 namespace ChIPseq.Droid
 {
-    public class FirebaseAndroid : IFirebaseDelegate
+    public class FirebaseDelegate : IFirebaseDelegate
     {
-        public FirebaseAndroid()
+        public FirebaseDelegate()
         {
             Firebase.Database.FirebaseDatabase.Instance.SetPersistenceEnabled(true);
         }
@@ -24,21 +24,6 @@ namespace ChIPseq.Droid
         }
 
         public void Get(string path, Action<string> handler)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Get(List<string> path, Action<int> handler)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Get(List<string> path, Action<bool> handler)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Get(List<string> path, Action<string> handler)
         {
             throw new NotImplementedException();
         }
@@ -59,21 +44,6 @@ namespace ChIPseq.Droid
         }
 
         public void Set(string path, string val)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Set(List<string> path, int val)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Set(List<string> path, bool val)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Set(List<string> path, string val)
         {
             throw new NotImplementedException();
         }

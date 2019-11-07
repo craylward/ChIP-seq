@@ -3012,15 +3012,6 @@ namespace ChIPseq.Droid
 			// aapt resource value: 0x7f080026
 			public const int common_google_play_services_unknown_issue = 2131230758;
 			
-			// aapt resource value: 0x7f080028
-			public const int firebase_database_url = 2131230760;
-			
-			// aapt resource value: 0x7f080027
-			public const int gcm_defaultSenderId = 2131230759;
-			
-			// aapt resource value: 0x7f080029
-			public const int google_storage_bucket = 2131230761;
-			
 			// aapt resource value: 0x7f080000
 			public const int mr_button_content_description = 2131230720;
 			

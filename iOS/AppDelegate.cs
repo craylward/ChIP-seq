@@ -14,7 +14,7 @@ namespace ChIPseq.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            DependencyService.Register<FirebaseiOS>();
+            DependencyService.Register<FirebaseDelegate>();
 
             Firebase.Core.App.Configure();
 

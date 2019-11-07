@@ -22,7 +22,9 @@ namespace ChIPseq.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            DependencyService.Register<FirebaseAndroid>();
+            Firebase.FirebaseApp.InitializeApp(this);
+
+            DependencyService.Register<FirebaseDelegate>();
 
             LoadApplication(new App());
         }

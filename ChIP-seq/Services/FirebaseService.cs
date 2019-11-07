@@ -8,13 +8,13 @@ namespace ChIPseq.Services
 {
     public interface IFirebaseDelegate
     {
-        void Set(List<string> path, int val);
-        void Set(List<string> path, bool val);
-        void Set(List<string> path, string val);
+        void Set(string path, int val);
+        void Set(string path, bool val);
+        void Set(string path, string val);
 
-        void Get(List<string> path, Action<int> handler);
-        void Get(List<string> path, Action<bool> handler);
-        void Get(List<string> path, Action<string> handler);
+        void Get(string path, Action<int> handler);
+        void Get(string path, Action<bool> handler);
+        void Get(string path, Action<string> handler);
 
         void GetExperiments(Action<List<Experiment>> handler);
     }
@@ -32,15 +32,14 @@ namespace ChIPseq.Services
 
         public void AddExperiment(Experiment exp)
         {
-            firebaseDel.Set(new List<string> { "records", exp.Name, "sonicate_min" }, exp.Sonication);
-            firebaseDel.Set(new List<string> { "records", exp.Name, "incubate_hr" }, exp.Incubation);
+            firebaseDel.Set("records/{exp.Name}/date", exp.Date.ToString(Experiment.DateFormat));
+            firebaseDel.Set("records/{exp.Name}/sonicate_min", exp.Sonication);
+            firebaseDel.Set("records/{exp.Name}/incubate_hr", exp.Incubation);
         }
 
         public void GetExperiments(Action<List<Experiment>> handler)
         {
             firebaseDel.GetExperiments(handler);
         }
-
     }
-
 }

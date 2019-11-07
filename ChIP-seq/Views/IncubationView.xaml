@@ -23,7 +23,7 @@
                 Clicked="OnContinueClicked"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="FillAndExpand"
-                BackgroundColor="DarkBlue"
+                BackgroundColor="Blue"
             />
         </StackLayout>
 	</ContentPage.Content>

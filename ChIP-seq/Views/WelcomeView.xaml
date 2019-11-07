@@ -5,7 +5,7 @@
     BindingContext="ChIPseq.Views.WelcomeViewModel">
 	<ContentPage.Content>
         <StackLayout Padding="50">
-            <Button Text="Start Experimemt"
+            <Button Text="Start Experiment"
                 FontAttributes="Bold"
                 Clicked="OnStartExperimentClicked"
                 VerticalOptions="CenterAndExpand"

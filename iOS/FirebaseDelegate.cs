@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using ChIPseq.Models;
 using ChIPseq.Services;
 using Firebase.Database;
@@ -9,27 +10,27 @@ using Foundation;
 
 namespace ChIPseq.iOS
 {
-    public class FirebaseiOS : IFirebaseDelegate
+    public class FirebaseDelegate : IFirebaseDelegate
     {
         DatabaseReference rootNode;
 
-        public FirebaseiOS()
+        public FirebaseDelegate()
         {
             Database.DefaultInstance.PersistenceEnabled = true;
             rootNode = Database.DefaultInstance.GetRootReference();
         }
 
-        public void Get(List<string> path, Action<int> handler)
+        public void Get(string path, Action<int> handler)
         {
             throw new NotImplementedException();
         }
 
-        public void Get(List<string> path, Action<bool> handler)
+        public void Get(string path, Action<bool> handler)
         {
             throw new NotImplementedException();
         }
 
-        public void Get(List<string> path, Action<string> handler)
+        public void Get(string path, Action<string> handler)
         {
             throw new NotImplementedException();
         }
@@ -45,10 +46,14 @@ namespace ChIPseq.iOS
                 foreach (var entry in dic)
                 {
                     var experiment = new Experiment();
+                    var firebaseExp = (NSDictionary)entry.Value;
+
+                    Debug.WriteLine($"{firebaseExp}");
                     experiment.Name = (NSString)entry.Key;
-                    experiment.Sonication = (int)(((NSDictionary)entry.Value)["sonicate_min"] as NSNumber);
-                    experiment.Incubation = (int)(((NSDictionary)entry.Value)["incubate_hr"] as NSNumber);
-                    //Debug.WriteLine($"{experiment}");
+                    var date = (string)(firebaseExp["date"] as NSString);
+                    experiment.Date = DateTime.ParseExact(date, Experiment.DateFormat, CultureInfo.InvariantCulture);
+                    experiment.Sonication = (int)(firebaseExp["sonicate_min"] as NSNumber);
+                    experiment.Incubation = (int)(firebaseExp["incubate_hr"] as NSNumber);
                     experiments.Add(experiment);
                 }
                 handler(experiments);
@@ -83,6 +88,21 @@ namespace ChIPseq.iOS
                 reference = reference.GetChild(node);
             }
             reference.SetValue(new NSString(val));
+        }
+
+        public void Set(string path, int val)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Set(string path, bool val)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Set(string path, string val)
+        {
+            throw new NotImplementedException();
         }
     }
 }
